@@ -26,8 +26,8 @@ def Nat.sub : Nat → Nat → Nat
   | Nat.succ a, Nat.succ b => Nat.sub a b
 
 def Nat.add : Nat → Nat → Nat
-  | a, Nat.zero   => a
-  | a, Nat.succ b => Nat.succ (Nat.add a b)
+  | Nat.zero, b   => b
+  | Nat.succ a, b => Nat.succ (Nat.add a b)
 
 def Nat.mul : Nat → Nat → Nat
   | _, 0          => 0
